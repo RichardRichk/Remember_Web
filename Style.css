@@ -1,0 +1,337 @@
+/******RESET******/
+*{
+    padding: 0; 
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  /* Header */
+  
+  header {
+    background: linear-gradient(95.24deg, #1E52B4 -10.53%, #002777 103.54%);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 10px 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav ul li a.btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+
+
+  /* Banner */
+
+  .section_banner{
+    background: linear-gradient(95.24deg, #1E52B4 -10.53%, #002777 103.54%);
+  }
+
+  .banner{
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .banner_title{
+    padding-top: 70px;
+    max-width: 435px;
+    color: #F5F5F5
+  }
+
+  .section_banner .search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.section_banner .search-box input, 
+.section_banner .search-box button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.section_banner .search-box button {
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+
+  /* PLACES */
+
+  .section_places{
+    background-color: #fff;
+    padding: 40px 0;
+  }
+
+
+/* Estilo dos cartões */
+.location-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.location-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.location-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.location-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Grid para dispor os cartões */
+.section_places .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* duas colunas */
+    gap: 20px; /* espaçamento entre os itens */
+}
+
+
+/* PROMO */
+
+.section_promo {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .promo_title{
+    max-width: 460px;
+    padding-top: 90px;
+  }
+
+  .promo_title h2 {
+    color: #0056b3;
+  }
+  
+  .promo_title span {
+    color: #28a745;
+  }
+
+  /* Footer */
+.footer {
+  background-color: #28a745;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 5px 0;
+    font-weight: 400;
+}
+
+footer p:last-child {
+    font-weight: bold;
+}
+
+
+/* Responsividade para Tablets */
+@media (max-width: 768px) {
+  .container {
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .banner {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .banner_title {
+      padding-top: 30px;
+      max-width: 100%;
+  }
+
+  .section_banner .search-box {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .section_places .container {
+      grid-template-columns: repeat(2, 1fr); /* duas colunas para tablets */
+  }
+
+  .promo_title {
+      padding-top: 60px;
+      max-width: 100%;
+  }
+}
+
+/* Responsividade para Smartphones */
+@media (max-width: 480px) {
+  .container {
+      width: 95%;
+  }
+
+  header {
+      padding: 20px 0;
+  }
+
+  nav ul {
+      padding: 5px 0;
+  }
+
+  nav ul li {
+      display: block;
+      margin: 5px 0;
+  }
+
+  .banner {
+      padding: 40px 0;
+  }
+
+  .banner_title {
+      padding-top: 20px;
+  }
+
+  .section_banner .search-box {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .section_banner .search-box input,
+  .section_banner .search-box button {
+      width: 100%;
+  }
+
+  .section_places .container {
+      grid-template-columns: 1fr; /* uma coluna para smartphones */
+  }
+
+  .promo_title {
+      padding-top: 40px;
+  }
+
+  footer {
+      padding: 15px 0;
+  }
+
+  footer p {
+      font-size: 0.875rem;
+  }
+}
+
+
+/* Estilo do Menu Hambúrguer */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Estilo para o menu mobile */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 60px; /* Ajuste conforme o tamanho do seu header */
+  right: 0;
+  background-color: #1E52B4;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-menu .nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu .nav-list li {
+  margin: 15px 0;
+}
+
+.mobile-menu .nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+}
+
+/* Mostrar o menu hambúrguer em dispositivos móveis */
+@media (max-width: 768px) {
+  .nav-list {
+      display: none;
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
+
+  .mobile-menu {
+      display: block;
+  }
+}
+
+/* Menu hambúrguer ativo */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
